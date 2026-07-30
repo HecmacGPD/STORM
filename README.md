@@ -1,39 +1,17 @@
-# Hardware source status
+# Summary
+This is an archive for project STORM, a modular flight computer designed by myself on behalf of ANU Rocketry Payoload Team, between late 2024 and early 2025. 
+The design consists of the MONAD mainboard, within the STORM system. 
+It features a spartan 6 FPGA, STM32F405 MCU and assorted peripherals, namely a Quectel cellular and gps module, MLRS 915mhz transponder for telemetry, Omnivision low-resolution camera for snapshot image transmission, USB-C for charging, solar cell connection, a large 18650 based battery pack featuring flex-pcb resistive heaters, multiple fan connections for thermal regulation, usb programming, redundant storage via micro-sd, onboard barometer, QOL features like expansive GPIO, JTAG breakouts, QWIIC connectors, assorted status leds. 
+The design was optimized over several iterations to reduce cost, three major iterations occured. The final iteration swapped from BGA to QFP for the spartan 6 and cut several components. Final cost was $250 AUD for 2pcs assembled via JLCPCB.
 
-The native PCB and mechanical CAD archives are not currently available in this checkout. Recovery from old university accounts and personal storage is ongoing.
+# Documentation index
 
-The images and preliminary datasheet in this repository are useful design evidence, but they are not substitutes for:
+|Document|Purpose|Revision caveat|
+|-|-|-|
+|[MONAD project-specific extract (PDF)](MONAD-project-extract.pdf)|Useful PDF pages with overview, preliminary limits, pin tables, bus addresses, GPIO, and radio commands|Primarily reflects the earlier BGA/external-RAM board revision; values remain unverified|
+|[Architecture](architecture.md)|Concise description of compute domains, buses, power, telemetry, and interfaces|System-level summary, not a manufacturing specification|
+|[Recovered design notes](design-notes.md)|Cleaned requirements, alternatives, and targets from the original planning notes|Targets are not represented as achieved results|
+|[Document archive](archive/README.md)|Full 85-page export and repaired DOCX source|Most content is copied component-reference material and is retained only for provenance|
 
-- editable schematics;
-- PCB layout source;
-- verified fabrication outputs;
-- bill of materials and approved substitutions;
-- centroid/pick-and-place data;
-- mechanical assemblies; or
-- firmware and FPGA source.
-
-No reconstructed source has been presented as an original recovered file.
-
-## Revision map
-
-| Revision group | Status | Identifying material |
-| --- | --- | --- |
-| Later cost-reduced revision | Renders recovered; native source unavailable | QFP Spartan-6, revised placement, incomplete assembly concept |
-| Earlier revision | Renders and preliminary documentation recovered; native source unavailable | BGA Spartan-6 and external application RAM |
-
-## Planned source layout
-
-If the original archives are recovered, they will be added without rewriting their history:
-
-```text
-hardware/
-├── pcb/
-│   ├── source/
-│   └── fabrication/
-├── mechanical/
-│   ├── source/
-│   └── exports/
-└── README.md
-```
-
-Each recovered package should include its original revision/date and a short note identifying which images and datasheet sections correspond to it.
+## Statement of work
+With the exception of some requirement documentation, This is entirely my own work, all PCB design, CAD, etc was my own work. 
