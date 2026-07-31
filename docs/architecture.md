@@ -44,7 +44,7 @@ The older revision used a BGA Spartan-6 and external application RAM. Later cost
 
 The documented onboard sensor suite consists of:
 
-- **ICM-20948** 9-axis inertial measurement unit;
+- **ICM-20948** 9-axis inertial measurement unit (cut in final version);
 - **BMP580** barometric pressure sensor; and
 - multiple **TMP102** temperature sensors positioned near major thermal zones.
 
@@ -98,14 +98,3 @@ The expansion connector exposed a mixture of:
 - grounds and negotiation/control signals.
 
 See the [project-specific datasheet extract](MONAD-project-extract.pdf) for the recovered pin tables. Those tables are preliminary and should be checked against native CAD before any hardware reuse.
-
-## Verification boundary
-
-The recovered material demonstrates architecture, component selection, interface planning, layout work, cost-reduction iteration, and documentation. It does not establish:
-
-- completed flight or environmental qualification;
-- demonstrated radio range;
-- validated charging current across all conditions;
-- validated redundancy behavior;
-- production-ready schematic/layout release; or
-- conformance of every datasheet table to the final cost-reduced revision.
